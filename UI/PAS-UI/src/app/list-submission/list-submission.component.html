@@ -1,0 +1,29 @@
+<div class="col-md-12">
+  <h4> Submission Details</h4>
+  <button class="btn btn-danger" (click)="addSubmission()"> Add Submission</button>
+  <div class="col-md-9">&nbsp;</div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th style="display:none">Id</th>
+      <th>Account Name</th>
+      <th>Inception Date</th>
+      <th>Expiry Date</th>
+      <th>Applicant Name</th>
+      <th>Coverages</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let submission of submissions">
+        <td style="display:none">{{submission.id}}</td>
+        <td>{{submission.accountid}}</td>
+        <td>{{submission.inceptiondate}}</td>
+        <td>{{submission.expirydate}}</td>
+        <td>{{submission.applicantname}}</td>
+        <td>{{submission.coverages}}</td>
+        <td><button class="btn btn-danger" (click)="editSubmission(submission)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

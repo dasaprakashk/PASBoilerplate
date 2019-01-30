@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Registration</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="producercode">Producer Code:</label>
+      <input formControlName="producercode" placeholder="Producer code" name="producercode" class="form-control" id="producercode">
+    </div>
+
+    <div class="form-group">
+      <label for="producername">Producer Name:</label>
+      <input formControlName="producername" placeholder="Producer Name" name="producername" class="form-control" id="producername">
+    </div>
+
+    <div class="form-group">
+      <label for="produceremail">Producer Email:</label>
+      <input type="email" formControlName="produceremail" placeholder="Producer Email" name="produceremail" class="form-control" id="produceremail">
+    </div>
+
+    <div class="form-group">
+      <label for="accountname">Account Name:</label>
+      <input type="accountname" formControlName="accountname" placeholder="Account Name" name="accountname" class="form-control" id="accountname">
+    </div>
+
+    <button class="btn btn-success">Create</button>
+  </form>
+</div>

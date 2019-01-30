@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <h4> Registration Details</h4>
+  <button class="btn btn-danger" (click)="addRegistration()"> Add Registration</button>
+  <div class="col-md-9">&nbsp;</div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th style="display:none">Id</th>
+      <th>Producer code</th>
+      <th>Producer Name</th>
+      <th>Producer Email</th>
+      <th>Account Name</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let registration of registrations">
+      <td style="display:none">{{registration.id}}</td>
+      <td>{{registration.producercode}}</td>
+      <td>{{registration.producername}}</td>
+      <td>{{registration.produceremail}}</td>
+      <td>{{registration.accountname}}</td>
+      <td><button class="btn btn-danger" (click)="editRegistration(registration)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

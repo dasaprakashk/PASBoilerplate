@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <h4> Policy Details</h4>
+  <div class="col-md-9">&nbsp;</div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th style="display:none">Id</th>
+      <th>Account Name</th>
+      <th>Premium</th>
+      <th>Producer Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let issue of issues">
+      <td style="display:none">{{issue.id}}</td>
+      <td>{{issue.accountid}}</td>
+      <td>{{issue.quoteid}}</td>
+      <td>{{issue.producername}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

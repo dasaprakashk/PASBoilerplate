@@ -1,0 +1,50 @@
+<div class="col-md-6">
+  <h2 class="text-center">Generate Quote</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="risktype">Risk Type:</label>
+      <select formControlName="risktype" name="risktype" class="form-control" id="risktype">
+        <option value="Financial">Financial</option>
+        <option value="Nonfinancial">Non-Financial</option>
+        <option value="Public">Public</option>
+      </select>
+      <input type="hidden" formControlName="submissionid" name="submissionid" id="submissionid" value={{submissionId}}>
+    </div>
+
+    <div class="form-group">
+      <label for="employeecount">Employee Count:</label>
+      <input type="number" formControlName="employeecount" placeholder="Employee Count" name="employeecount" class="form-control" id="employeecount">
+    </div>
+
+    <div class="form-group">
+      <label for="limit">Limit:</label>
+      <input type="number" formControlName="limit" placeholder="Limit" name="limit" class="form-control" id="limit">
+    </div>
+
+    <div class="form-group">
+      <label for="retention">Retention:</label>
+      <input type="number" formControlName="retention" placeholder="Retention" name="retention" class="form-control" id="retention">
+    </div>
+
+    <div class="form-group">
+      <label for="equityrisks">Equity Risk:</label>
+      <select formControlName="equityrisks" name="equityrisks" class="form-control" id="equityrisks">
+        <option value="Private">Private</option>
+        <option value="Nonprivate">Non-Private</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="tierscore">Tier Score:</label>
+      <select formControlName="tierscore" name="tierscore" class="form-control" id="tierscore">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success">Create</button>
+  </form>
+</div>

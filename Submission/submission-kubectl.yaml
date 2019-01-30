@@ -1,0 +1,39 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: submission
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: submission
+    spec:
+      containers:
+      - name: submission
+        image: tachion2018registry.azurecr.io/docker-images/submission:v1
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: acr-auth
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: submission
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: submission
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: submissionlb
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: submission

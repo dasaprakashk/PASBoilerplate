@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <h4> Quote Details</h4>
+  <button class="btn btn-danger" (click)="addQuote()"> Generate Quote</button>
+  <div class="col-md-9">&nbsp;</div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th style="display:none">Id</th>
+      <th>Account Id</th>
+      <th>Risk Type</th>
+      <th>Employee Count</th>
+      <th>Tier Score</th>
+      <th>Quote Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let quote of quotes">
+      <td style="display:none">{{quote.id}}</td>
+      <td>{{quote.accountid}}</td>
+      <td>{{quote.risktype}}</td>
+      <td>{{quote.employeecount}}</td>
+      <td>{{quote.tierscore}}</td>
+      <td>{{quote.quoteamount}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

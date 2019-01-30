@@ -1,0 +1,94 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Submission</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="accountid">Account Id:</label>
+      <select class="form-control" formControlName="accountid">
+        <option value="" disabled>Choose an account</option>
+        <option *ngFor="let registration of registrations"
+                [value]="registration.id">
+            {{registration.accountname}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="inceptiondate">Inception Date:</label>
+      <input type="date" formControlName="inceptiondate" placeholder="Inception Date" name="inceptiondate" class="form-control" id="inceptiondate">
+    </div>
+
+    <div class="form-group">
+      <label for="expirydate">Expiry Date:</label>
+      <input type="date" formControlName="expirydate" placeholder="Expiry Date" name="expirydate" class="form-control" id="expirydate">
+    </div>
+
+    <div class="form-group">
+      <label for="applicantname">Applicant Name:</label>
+      <input formControlName="applicantname" placeholder="Applicant Name" name="applicantname" class="form-control" id="applicantname">
+    </div>
+
+    <div class="form-group">
+      <label for="applicantemail">Applicant Email:</label>
+      <input type="email" formControlName="applicantemail" placeholder="Applicant Email" name="applicantemail" class="form-control" id="applicantemail">
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input formControlName="city" placeholder="City" name="city" class="form-control" id="city">
+    </div>
+
+    <div class="form-group">
+      <label for="zip">Zip:</label>
+      <input type="number" formControlName="zip" placeholder="Zip" name="zip" class="form-control" id="zip">
+    </div>
+
+    <div class="form-group">
+      <label for="state">State:</label>
+      <input formControlName="state" placeholder="State" name="state" class="form-control" id="state">
+    </div>
+
+    <div class="form-group">
+      <label for="domicilestate">Domicile State:</label>
+      <input formControlName="domicilestate" placeholder="Domicile State" name="domicilestate" class="form-control" id="domicilestate">
+    </div>
+
+    <div class="form-group">
+      <label for="wsgusa">WSG / USA</label>
+      <select class="form-control"  formControlName="wsgusa" name="wsgusa" id="wsgusa">
+        <option value="wsg">WSG</option>
+        <option value="USA">USA</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="coverages">Coverages</label>
+      <select class="form-control"  formControlName="coverages" name="coverages" id="coverages">
+        <option value="EPL">EPL</option>
+        <option value="EO">E & O</option>
+        <option value="DO">D & O</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="underwriter">Underwriter</label>
+      <input formControlName="underwriter" placeholder="Underwriter" name="underwriter" class="form-control" id="underwriter">
+    </div>
+
+    <div class="form-group">
+      <label for="natureofops">Nature of Ops</label>
+      <input formControlName="natureofops" placeholder="Nature of Ops" name="natureofops" class="form-control" id="natureofops">
+    </div>
+
+    <div class="form-group">
+      <label for="mgcis">MGCIS</label>
+      <input formControlName="mgcis" placeholder="MGCIS" name="mgcis" class="form-control" id="mgcis">
+    </div>
+
+    <div class="form-group">
+      <label for="submissionrecdate">Submission Recd Date</label>
+      <input type="date" formControlName="submissionrecdate" placeholder="Received Date" name="submissionrecdate" class="form-control" id="submissionrecdate">
+    </div>
+
+    <button class="btn btn-success">Create</button>
+  </form>
+</div>
